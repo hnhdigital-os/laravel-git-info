@@ -1,8 +1,8 @@
 <?php
 
-namespace Bluora\LaravelGitVersion\Providers;
+namespace Bluora\GitVersion\Providers;
 
-use Bluora\LaravelGitVersion\GitVersion;
+use Bluora\GitVersion\GitVersion;
 use Illuminate\Support\ServiceProvider;
 
 class GitVersionServiceProvider extends ServiceProvider

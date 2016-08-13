@@ -24,12 +24,12 @@
   },
   "autoload": {
     "psr-4": {
-        "Bluora\\LaravelGitVersion\\": "src/"
+        "Bluora\\GitVersion\\": "src/"
     }
   },
   "autoload-dev": {
     "psr-4": {
-        "Bluora\\LaravelGitVersion\\Tests\\": "tests/"
+        "Bluora\\GitVersion\\Tests\\": "tests/"
     }
   },
   "scripts": {

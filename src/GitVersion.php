@@ -1,6 +1,6 @@
 <?php
 
-namespace Bluora\LaravelGitVersion;
+namespace Bluora\GitVersion;
 
 class GitVersion
 {

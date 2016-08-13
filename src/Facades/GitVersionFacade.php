@@ -1,6 +1,6 @@
 <?php
 
-namespace Bluora\LaravelGitVersion\Facades;
+namespace Bluora\GitVersion\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
