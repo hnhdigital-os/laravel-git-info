@@ -1,4 +1,4 @@
-# GIT version provider for Laravel 5
+# GIT info provider for Laravel 5
 
 ### This package is compatible with Laravel 5.
 
@@ -7,5 +7,5 @@
 Install using composer:
 
 ```
-composer require bluora/laravel-git-version
+composer require bluora/laravel-git-info
 ```

@@ -1,8 +1,8 @@
 <?php
 
-namespace Bluora\GitVersion;
+namespace Bluora\GitInfo;
 
-class GitVersion
+class GitInfo
 {
     /**
      * Run a GIT command.
@@ -24,7 +24,7 @@ class GitVersion
      * 
      * @return string
      */
-    public function getBranch()
+    public function branch()
     {
         return $this->git('symbolic-ref --short HEAD');
     }
@@ -34,7 +34,7 @@ class GitVersion
      * 
      * @return string
      */
-    public function getVersion()
+    public function version()
     {
         return $this->git('describe --always --tags --dirty');
     }

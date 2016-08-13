@@ -1,18 +1,17 @@
 <?php
 
-namespace Bluora\GitVersion\Providers;
+namespace Bluora\GitInfo;
 
-use Bluora\GitVersion\GitVersion;
-use Illuminate\Support\ServiceProvider;
+use Illuminate\Support\ServiceProvider as BaseServiceProvider;
 
-class GitVersionServiceProvider extends ServiceProvider
+class ServiceProvider extends BaseServiceProvider
 {
     /**
      * Indicates if loading of the provider is deferred.
      *
      * @var bool
      */
-    protected $defer = true;
+    protected $defer = false;
 
     /**
      * Register the service provider.
@@ -21,8 +20,8 @@ class GitVersionServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app->bind('GitVersion', function () {
-            return new GitVersion();
+        $this->app->bind('GitInfo', function () {
+            return new GitInfo();
         });
     }
 

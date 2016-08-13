@@ -1,10 +1,10 @@
 <?php
 
-namespace Bluora\GitVersion\Facades;
+namespace Bluora\GitInfo;
 
-use Illuminate\Support\Facades\Facade;
+use Illuminate\Support\Facades\Facade as BaseFacade;
 
-class GitVersionFacade extends Facade
+class Facade extends BaseFacade
 {
     /**
      * Get the registered name of the component.
@@ -13,6 +13,6 @@ class GitVersionFacade extends Facade
      */
     protected static function getFacadeAccessor()
     {
-        return 'GitVersion';
+        return 'GitInfo';
     }
 }
