@@ -1,0 +1,41 @@
+{
+  "name": "bluora/laravel-git-version",
+  "description": "Get information about the current git state.",
+  "keywords": ["laravel","git","version","branch"],
+  "license": "MIT",
+  "authors": [
+    {
+     "name": "Rocco Howard",
+     "email": "rocco@bluora.com.au"
+    }
+  ],
+  "require": {
+    "php": ">=5.3.0"
+  },
+  "require-dev": {
+    "codeclimate/php-test-reporter": "dev-master",
+    "illuminate/config": "5.*",
+    "illuminate/container": "5.*",
+    "illuminate/support": "5.*",
+    "mockery/mockery": "0.9.*",
+    "phpmd/phpmd" : "@stable",
+    "phpunit/phpunit": "4.*",
+    "squizlabs/php_codesniffer": "^2.0"
+  },
+  "autoload": {
+    "psr-4": {
+        "Bluora\\LaravelGitVersion\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+        "Bluora\\LaravelGitVersion\\Tests\\": "tests/"
+    }
+  },
+  "scripts": {
+    "test": "composer phpunit && composer phpcs",
+    "phpcs": "./vendor/bin/phpcs -p -s --standard=PSR2 ./src ./tests",
+    "phpunit": "phpunit",
+    "hhvm": "hhvm ./vendor/phpunit/phpunit/phpunit"
+  }
+}
