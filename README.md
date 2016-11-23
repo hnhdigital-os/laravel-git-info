@@ -12,13 +12,14 @@ Via composer:
 
 `$ composer require bluora/laravel-git-info dev-master`
 
+### Laravel configuration
 
 Enable the service provider by editing config/app.php:
 
 ```php
     'providers' => [
         ...
-        Bluora\GitInfo\ServiceProvider::class,
+        Bluora\LaravelGitInfo\ServiceProvider::class,
         ...
     ];
 ```
@@ -28,37 +29,45 @@ Enable the facade by editing config/app.php:
 ```php
     'aliases' => [
         ...
-        'GitInfo' => Bluora\GitInfo\Facade::class,
+        'GitInfo' => Bluora\LaravelGitInfo\Facade::class,
         ...
     ];
 ```
 
-## Usage
+## Usage in Laravel
 
 Current version. Eg 'de83088-dirty'.
 
 ```php
-GitInfo::version();
+echo GitInfo::version();
 ```
 
 Current branch. Eg 'master'.
 
 ```php
-GitInfo::branch();
+echo GitInfo::branch();
 ```
 
 Current total commits. Eg 7.
 
 ```php
-GitInfo::commits();
+echo GitInfo::commits();
 ```
 
-Current commit difference between current branch and master.
+Commit difference between current branch and master.
 
 Optional arguments include specifying a branch and returning a text version.
 
 ```php
-GitInfo::commitsBehind($branch = 'master', $return_text = true);
+echo GitInfo::commitsBehind($branch = 'master', $return_text = true);
+```
+
+## Usage in php
+
+```php
+use Bluora\LaravelGitInfo\GitInfo;
+
+echo (new GitInfo())->version();
 ```
 
 ## Contributing

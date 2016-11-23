@@ -1,6 +1,6 @@
 <?php
 
-namespace Bluora\GitInfo;
+namespace Bluora\LaravelGitInfo;
 
 class GitInfo
 {
@@ -44,7 +44,12 @@ class GitInfo
     /**
      * Get total commits behind a given branch.
      *
+     * @param string $branch
+     * @param bool   $return_text
+     *
      * @return string
+     *
+     * @SuppressWarnings(PHPMD.BooleanArgumentFlag)
      */
     public function commitsBehind($branch = 'master', $return_text = true)
     {

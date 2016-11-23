@@ -21,12 +21,12 @@
   },
   "autoload": {
     "psr-4": {
-        "Bluora\\GitInfo\\": "src/"
+        "Bluora\\LaravelGitInfo\\": "src/"
     }
   },
   "autoload-dev": {
     "psr-4": {
-        "Bluora\\GitInfo\\Tests\\": "tests/"
+        "Bluora\\LaravelGitInfo\\Tests\\": "tests/"
     }
   },
   "scripts": {
