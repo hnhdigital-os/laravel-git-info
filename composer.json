@@ -16,7 +16,7 @@
     "codeclimate/php-test-reporter": "dev-master",
     "mockery/mockery": "0.9.*",
     "phpmd/phpmd" : "@stable",
-    "phpunit/phpunit": "4.*",
+    "phpunit/phpunit": "5.*",
     "squizlabs/php_codesniffer": "^2.0"
   },
   "autoload": {

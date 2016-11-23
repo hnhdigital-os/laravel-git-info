@@ -6,6 +6,8 @@ This package has been developed by H&H|Digital, an Australian botique developer.
 
 [![Build Status](https://travis-ci.org/bluora/laravel-git-info.svg?branch=master)](https://travis-ci.org/bluora/laravel-git-info) [![StyleCI](https://styleci.io/repos/65619816/shield?branch=master)](https://styleci.io/repos/65619816) [![Test Coverage](https://codeclimate.com/github/bluora/laravel-git-info/badges/coverage.svg)](https://codeclimate.com/github/bluora/laravel-git-info/coverage) [![Issue Count](https://codeclimate.com/github/bluora/laravel-git-info/badges/issue_count.svg)](https://codeclimate.com/github/bluora/laravel-git-info) [![Code Climate](https://codeclimate.com/github/bluora/laravel-git-info/badges/gpa.svg)](https://codeclimate.com/github/bluora/laravel-git-info) 
 
+Provides a wrapper for getting info from GIT.
+
 ## Install
 
 Via composer:
@@ -34,7 +36,9 @@ Enable the facade by editing config/app.php:
     ];
 ```
 
-## Usage in Laravel
+## Usage
+
+### Laravel
 
 Current version. Eg 'de83088-dirty'.
 
@@ -62,7 +66,7 @@ Optional arguments include specifying a branch and returning a text version.
 echo GitInfo::commitsBehind($branch = 'master', $return_text = true);
 ```
 
-## Usage in php
+### PHP
 
 ```php
 use Bluora\LaravelGitInfo\GitInfo;
