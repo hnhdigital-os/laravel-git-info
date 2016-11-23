@@ -14,9 +14,6 @@
   },
   "require-dev": {
     "codeclimate/php-test-reporter": "dev-master",
-    "illuminate/config": "5.*",
-    "illuminate/container": "5.*",
-    "illuminate/support": "5.*",
     "mockery/mockery": "0.9.*",
     "phpmd/phpmd" : "@stable",
     "phpunit/phpunit": "4.*",

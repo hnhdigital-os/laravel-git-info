@@ -1,0 +1,16 @@
+before_script:
+  - composer self-update
+  - composer install --prefer-dist --no-interaction
+php:
+  - 5.3
+  - 5.4
+  - 5.5
+  - 5.6
+  - 7.0
+language: php
+matrix: 
+  allow_failures: 
+  - php: hhvm
+addons:
+  code_climate:
+      repo_token: ef7aa1df4a7af158e6c3f21b6c251667db0e014e226ee668493f7c24b2daca0f

@@ -11,7 +11,7 @@ class ServiceProvider extends BaseServiceProvider
      *
      * @var bool
      */
-    protected $defer = false;
+    protected $defer = true;
 
     /**
      * Register the service provider.
@@ -20,7 +20,7 @@ class ServiceProvider extends BaseServiceProvider
      */
     public function register()
     {
-        $this->app->bind('GitInfo', function () {
+        $this->app->singleton(GitInfo::class, function () {
             return new GitInfo();
         });
     }
@@ -32,6 +32,6 @@ class ServiceProvider extends BaseServiceProvider
      */
     public function provides()
     {
-        return [];
+        return [GitInfo::class];
     }
 }
