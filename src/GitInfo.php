@@ -55,7 +55,7 @@ class GitInfo
     public function branch()
     {
         $result = $this->git('symbolic-ref --short HEAD');
-        if (empty($output)) {
+        if (empty($result)) {
             return 'master';
         }
         return $result;
