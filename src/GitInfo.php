@@ -13,6 +13,10 @@ class GitInfo
 
     /**
      * Setup.
+     *
+     * @param bool $base_path
+     *
+     * @SuppressWarnings(PHPMD.BooleanArgumentFlag)
      */
     public function __construct($base_path = false)
     {
@@ -38,10 +42,9 @@ class GitInfo
     {
         $current_directory = getcwd();
         chdir($this->base_path);
-        $output = shell_exec(sprintf('%s %s', 'git', $command));
+        $output = trim(shell_exec(sprintf('%s %s', 'git', $command)));
         chdir($current_directory);
-
-        return trim($output);
+        return $output;
     }
 
     /**
@@ -51,7 +54,11 @@ class GitInfo
      */
     public function branch()
     {
-        return $this->git('symbolic-ref --short HEAD');
+        $result = $this->git('symbolic-ref --short HEAD');
+        if (empty($output)) {
+            return 'master';
+        }
+        return $result;
     }
 
     /**

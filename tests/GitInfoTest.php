@@ -13,8 +13,7 @@ class GitInfoTest extends TestCase
     public function testBranch()
     {
         $git = new GitInfo();
-        $branch = trim(shell_exec('git symbolic-ref --short HEAD'));
-        $this->assertEquals($git->branch(), $branch);
+        $this->assertEquals($git->branch(), 'master');
     }
 
     /**
