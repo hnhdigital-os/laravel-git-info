@@ -20,7 +20,7 @@ class ServiceProvider extends BaseServiceProvider
      */
     public function register()
     {
-        $this->app->singleton(GitInfo::class, function () {
+        $this->app->singleton('GitInfo', function () {
             return new GitInfo();
         });
     }
@@ -32,6 +32,6 @@ class ServiceProvider extends BaseServiceProvider
      */
     public function provides()
     {
-        return [GitInfo::class];
+        return ['GitInfo'];
     }
 }
