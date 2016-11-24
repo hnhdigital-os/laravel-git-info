@@ -31,7 +31,7 @@ Enable the facade by editing config/app.php:
 ```php
     'aliases' => [
         ...
-        'GitInfo' => Bluora\LaravelGitInfo\Facade::class,
+        'Git' => Bluora\LaravelGitInfo\Facade::class,
         ...
     ];
 ```
@@ -43,19 +43,19 @@ Enable the facade by editing config/app.php:
 Current version. Eg 'de83088-dirty'.
 
 ```php
-echo GitInfo::version();
+echo Git::version();
 ```
 
 Current branch. Eg 'master'.
 
 ```php
-echo GitInfo::branch();
+echo Git::branch();
 ```
 
 Current total commits. Eg 7.
 
 ```php
-echo GitInfo::commits();
+echo Git::commits();
 ```
 
 Commit difference between current branch and master.
@@ -63,7 +63,7 @@ Commit difference between current branch and master.
 Optional arguments include specifying a branch and returning a text version.
 
 ```php
-echo GitInfo::commitsBehind($branch = 'master', $return_text = true);
+echo Git::commitsBehind($branch = 'master', $return_text = true);
 ```
 
 ### PHP
