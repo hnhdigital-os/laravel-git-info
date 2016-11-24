@@ -5,6 +5,29 @@ namespace Bluora\LaravelGitInfo;
 class GitInfo
 {
     /**
+     * Base path to run the git command from.
+     *
+     * @var string
+     */
+    private $base_path = '';
+
+    /**
+     * Setup.
+     */
+    public function __construct($base_path = false)
+    {
+        if ($base_path === false) {
+            $base_path = getcwd();
+            if (function_exists('base_path')) {
+                $base_path = base_path();
+            }
+        }
+        $this->base_path = $base_path;
+
+        return $this;
+    }
+
+    /**
      * Run a GIT command.
      *
      * @param string $command
@@ -13,10 +36,10 @@ class GitInfo
      */
     private function git($command)
     {
-        $dir = getcwd();
-        chdir(base_path());
-        $output = shell_exec(env('GIT_INFO_PATH', 'git').' '.$command);
-        chdir($dir);
+        $current_directory = getcwd();
+        chdir($this->base_path);
+        $output = shell_exec(sprintf('%s %s', 'git', $command));
+        chdir($current_directory);
 
         return trim($output);
     }
