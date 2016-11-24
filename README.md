@@ -12,7 +12,7 @@ Provides a wrapper for getting info from GIT.
 
 Via composer:
 
-`$ composer require bluora/laravel-git-info dev-master`
+`$ composer require bluora/laravel-git-info 1.*`
 
 ### Laravel configuration
 
