@@ -44,6 +44,7 @@ class GitInfo
         chdir($this->base_path);
         $output = trim(shell_exec(sprintf('%s %s', 'git', $command)));
         chdir($current_directory);
+
         return $output;
     }
 
@@ -58,6 +59,7 @@ class GitInfo
         if (empty($result)) {
             return 'master';
         }
+
         return $result;
     }
 
