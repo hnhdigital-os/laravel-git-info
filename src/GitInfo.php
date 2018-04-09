@@ -109,4 +109,14 @@ class GitInfo
     {
         return $this->git('describe --always --tags --dirty');
     }
+
+    /**
+     * Get total commits.
+     *
+     * @return string
+     */
+    public function lastCommitDate()
+    {
+        return $this->git('log -1 --format=%cd');
+    }
 }
