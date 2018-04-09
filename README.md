@@ -16,22 +16,26 @@ Via composer:
 
 ### Laravel configuration
 
-Enable the service provider by editing config/app.php:
-
-```php
-    'providers' => [
-        ...
-        Bluora\LaravelGitInfo\ServiceProvider::class,
-        ...
-    ];
-```
-
 Enable the facade by editing config/app.php:
 
 ```php
     'aliases' => [
         ...
         'Git' => Bluora\LaravelGitInfo\Facade::class,
+        ...
+    ];
+```
+
+The service provider will autoload from Laravel 5.5.
+
+To enable the service provider in versions prior to Laravel 5.4, edit the config/app.php:
+
+Enable the service provider by editing config/app.php:
+
+```php
+    'providers' => [
+        ...
+        Bluora\LaravelGitInfo\ServiceProvider::class,
         ...
     ];
 ```
