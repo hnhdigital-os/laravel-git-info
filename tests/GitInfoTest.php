@@ -45,4 +45,14 @@ class GitInfoTest extends TestCase
         $version = trim(shell_exec('git describe --always --tags --dirty'));
         $this->assertEquals($git->version(), $version);
     }
+
+    /**
+     * Assert the submodule status returns correctly.
+     */
+    public function testVersion()
+    {
+        $git = new GitInfo();
+        $submodule_status = trim(shell_exec('git submodule status'));
+        $this->assertEquals($git->submoduleStatus(), $submodule_status);
+    }
 }
