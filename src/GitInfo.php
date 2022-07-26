@@ -119,4 +119,18 @@ class GitInfo
     {
         return $this->git('log -1 --format=%cd');
     }
+
+    /**
+     * Get isubmodule status.
+     *
+     * @return string
+     */
+    public function submoduleStatus()
+    {
+        return $this->git('submodule status');
+    }
+
+
+
+
 }
