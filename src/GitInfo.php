@@ -129,8 +129,4 @@ class GitInfo
     {
         return $this->git('submodule status');
     }
-
-
-
-
 }
