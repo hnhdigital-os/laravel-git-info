@@ -49,7 +49,7 @@ class GitInfoTest extends TestCase
     /**
      * Assert the submodule status returns correctly.
      */
-    public function testVersion()
+    public function testSubmoduleStatus()
     {
         $git = new GitInfo();
         $submodule_status = trim(shell_exec('git submodule status'));
