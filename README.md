@@ -70,6 +70,12 @@ Optional arguments include specifying a branch and returning a text version.
 echo Git::commitsBehind($branch = 'master', $return_text = true);
 ```
 
+Show the status of the submodules.
+
+```php
+echo Git::submoduleStatus();
+```
+
 ### PHP
 
 ```php
